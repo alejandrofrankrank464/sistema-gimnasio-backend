@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "logs",
+  "info": {
+    "singularName": "log",
+    "pluralName": "logs",
+    "displayName": "Log"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Accion": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "crear_cliente",
+        "editar_cliente",
+        "eliminar_cliente",
+        "crear_pago",
+        "editar_pago",
+        "eliminar_pago"
+      ]
+    },
+    "Entidad": {
+      "type": "string",
+      "required": true
+    },
+    "EntidadId": {
+      "type": "string",
+      "required": true
+    },
+    "Detalles": {
+      "type": "json"
+    },
+    "Usuario": {
+      "type": "string"
+    },
+    "NombreCompleto": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "singularName": "cliente",
+    "pluralName": "clientes",
+    "displayName": "Cliente"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "LastName": {
+      "type": "string",
+      "required": true
+    },
+    "Phone": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "Email": {
+      "type": "email",
+      "unique": true
+    },
+    "Vip": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "Zumba": {
+      "type": "boolean",
+      "default": false
+    },
+    "Box": {
+      "type": "boolean",
+      "default": false
+    },
+    "Turno": {
+      "type": "enumeration",
+      "enum": [
+        "de 7:00 am a 8:00 am",
+        "de 8:00 am a 9:00 am",
+        "de 9:00 am a 10:00 am",
+        "de 10:00 am a 11:00 am",
+        "de 11:00 am a 12:00 pm",
+        "de 1:00 pm a 2:00 pm",
+        "de 2:00 pm a 3:00 pm",
+        "de 3:00 pm a 4:00 pm",
+        "de 4:00 pm a 5:00 pm",
+        "de 5:00 pm a 6:00 pm",
+        "de 6:00 pm a 7:00 pm",
+        "de 7:00 pm a 8:00 pm"
+      ]
+    },
+    "MetodoPago": {
+      "type": "enumeration",
+      "enum": [
+        "Efectivo",
+        "Tarjeta"
+      ]
+    },
+    "pagos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pago.pago",
+      "mappedBy": "cliente"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "configuraciones",
+  "info": {
+    "singularName": "configuracion",
+    "pluralName": "configuraciones",
+    "displayName": "Configuracion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clave": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "valor": {
+      "type": "text",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
